@@ -3,12 +3,17 @@ import { login } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 import './style.css'
 import GoToRegister from "../../components/a/GoToRegister";
+import showErrorAlert from "../../components/sweetalert/ShowErrorAlert";
+// import withReactContent from "sweetalert2-react-content";
+// import Swal from "sweetalert2";
 // import axios from "axios";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -31,10 +36,13 @@ function Login() {
       if(res.ok){
         navigate("/activities");
       }else{
-        alert(res.message)
+        // alert(res.message)
+        showErrorAlert('Autenticación invalida', res.message)
       }
     } catch (error) {
-      alert(error+" Error al iniciar sesión");
+      console.log(error);
+      showErrorAlert('Error al iniciar sesión', error.message)
+      // alert(error+" Error al iniciar sesión");
     }
 
     // try {
