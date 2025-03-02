@@ -16,10 +16,11 @@ import Login from './pages/auth/Login.jsx'
 // import Activities from './pages/home/Activities.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/home/Home.jsx';
+// import Home from './pages/home/Home.jsx';
 import Create from './components/Form/Create.jsx';
 import Edit from './components/Form/Edit.jsx';
 import Register from './pages/auth/Register.jsx';
+import Activities from './pages/home/Activities.jsx';
 
 // function App() {
 //   return (
@@ -43,7 +44,7 @@ function App() {
 
         <Route path="/activities" element={
           <PrivateRoute>
-          <Home />
+          <Activities />
         </PrivateRoute>
         } />
         <Route path="/create" element={
