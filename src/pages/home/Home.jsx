@@ -4,19 +4,22 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [items, setItems] = useState([]);
+  const token = localStorage.getItem('token');
 
   useEffect(() => {
     loadItems();
   }, []);
 
   const loadItems = async () => {
-    const res = await getItems();
+    
+    // console.log(token);
+    const res = await getItems(token);
     console.log(res);
     setItems(res.data.data);
   };
 
   const handleDelete = async (id) => {
-    await deleteItem(id);
+    await deleteItem(id, token);
     loadItems();
   };
 
@@ -26,10 +29,10 @@ function Home() {
       <Link to="/create">➕ Nueva actividad</Link>
       <ul>
         {items.map((item) => (
-          <li key={item.id}>
-            {item.first_name}{" "}
-            <Link to={`/edit/${item.id}`}>✏️ Editar</Link>
-            <button onClick={() => handleDelete(item.id)}>❌ Eliminar</button>
+          <li key={item._id}>
+            {item.title}{" "}
+            <Link to={`/edit/${item._id}`}>✏️ Editar</Link>
+            <button onClick={() => handleDelete(item._id)}>❌ Eliminar</button>
           </li>
         ))}
       </ul>
