@@ -32,7 +32,7 @@ function Edit() {
     e.preventDefault();
     console.log(complete);
     await updateItem(id, { title, description, complete }, getToken());
-    navigate("/");
+    navigate("/activities");
   };
 
   return (

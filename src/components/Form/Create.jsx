@@ -13,7 +13,7 @@ function Create() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createItem({ title, description }, getToken());
-    navigate("/");
+    navigate("/activities");
   };
 
   return (
