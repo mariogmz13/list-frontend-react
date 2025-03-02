@@ -21,6 +21,7 @@ import Create from './components/Form/Create.jsx';
 import Edit from './components/Form/Edit.jsx';
 import Register from './pages/auth/Register.jsx';
 import Activities from './pages/home/Activities.jsx';
+import { verifyToken } from './services/authService.js';
 
 // function App() {
 //   return (
@@ -35,6 +36,9 @@ import Activities from './pages/home/Activities.jsx';
 // }
 
 function App() {
+
+  verifyToken()
+
   return (
     
     <Router>

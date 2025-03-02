@@ -5,10 +5,28 @@
     min-width: 300px;
 }
 
+.card{
+    background-color: rgb(57, 57, 57);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    min-width: 300px;
+}
+
 h1{
     color: rgb(148, 148, 148);
     margin-top: 0;
     font-size: 40px;
+}
+
+
+
+h4{
+    margin: 5px;
+}
+
+h2{
+    margin: 5px;
 }
 
 
@@ -23,12 +41,42 @@ input{
     
 }
 
-button{
-    width: 100%;
+.btn{
+    display: block;
+    /* background-color: red; */
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+    margin: auto;
+    width: 300px;
     margin-top: 15px;
     margin-bottom: 15px;
     transition: 1s;
     
+}
+
+.edit{
+    background-color: rgb(88, 88, 255);
+}
+
+.delete{
+    background-color: rgb(255, 88, 88);
+}
+
+/* .actions{
+    width: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: 1s;
+} */
+
+.action{
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    transition: 1s;
 }
 button:hover{
     
