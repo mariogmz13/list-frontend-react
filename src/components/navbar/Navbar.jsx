@@ -1,6 +1,3 @@
-// import { logout } from "../../services/authService";
-// import { useNavigate } from "react-router-dom";
-
 import LogoutButton from '../button/LogoutButton';
 import './navbar.css'
 

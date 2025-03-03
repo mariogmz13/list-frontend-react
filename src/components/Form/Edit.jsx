@@ -16,8 +16,6 @@ function Edit() {
     setComplete(event.target.value === 'true');
   };
 
-  
-
   useEffect(() => {
     const fetchItem = async () => {
       const res = await getItemById(id, getToken());
@@ -46,7 +44,6 @@ function Edit() {
         <label>
         Completada:
         <select value={complete.toString()} onChange={statusChange}>
-          {/* <option value="">-- Selecciona una opción --</option> */}
           <option value='true'>Si</option>
           <option value='false'>No</option>
         </select>

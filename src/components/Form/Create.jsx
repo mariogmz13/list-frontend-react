@@ -6,7 +6,6 @@ import { getToken } from "../../services/authService";
 function Create() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  // const [complete, setComplete] = useState("");
   
   const navigate = useNavigate();
 
@@ -22,7 +21,6 @@ function Create() {
       <form onSubmit={handleSubmit}>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Nombre" required />
         <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Descripción"  />
-        {/* <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Nombre" required /> */}
         <button type="submit">Guardar</button>
       </form>
     </div>

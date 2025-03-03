@@ -18,7 +18,6 @@ function Register() {
         return true;
       }
       
-      // Aquí puedes enviar los datos del formulario
   }
 
   const handleSubmit = async (e) => {

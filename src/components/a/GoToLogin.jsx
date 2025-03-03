@@ -3,7 +3,6 @@ import '../../pages/auth/style.css'
 
 function GoToLogin() {
   const navigate = useNavigate();
-  // const [name, setName] = useState("");
   const handleClickConEvento = () => {
     navigate('/login')
   };
