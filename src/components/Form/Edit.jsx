@@ -3,6 +3,7 @@ import { getItemById, updateItem } from "../../services/activitiesService";
 import { useParams, useNavigate } from "react-router-dom";
 import { getToken } from "../../services/authService";
 import './form.css'
+import showSuccessAlert from "../sweetalert/ShowSuccessAlert";
 
 function Edit() {
   const { id } = useParams();
@@ -32,6 +33,7 @@ function Edit() {
     console.log(complete);
     await updateItem(id, { title, description, complete }, getToken());
     navigate("/activities");
+    showSuccessAlert('Actividad editada correctamente')
   };
 
   return (

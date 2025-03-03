@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createItem } from "../../services/activitiesService";
 import { useNavigate } from "react-router-dom";
 import { getToken } from "../../services/authService";
+import showSuccessAlert from "../sweetalert/ShowSuccessAlert";
 
 function Create() {
   const [title, setTitle] = useState("");
@@ -13,6 +14,7 @@ function Create() {
     e.preventDefault();
     await createItem({ title, description }, getToken());
     navigate("/activities");
+    showSuccessAlert('Actividad creada correctamente')
   };
 
   return (
