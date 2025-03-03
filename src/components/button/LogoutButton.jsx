@@ -1,7 +1,7 @@
 import { logout } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 
-function Activities() {
+function LogoutButton() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -16,4 +16,4 @@ function Activities() {
   )
 }
 
-export default Activities;
+export default LogoutButton;

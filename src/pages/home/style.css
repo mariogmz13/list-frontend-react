@@ -1,8 +1,9 @@
-.container{
-    background-color: rgb(57, 57, 57);
-    padding: 45px;
-    border-radius: 25px;
-    min-width: 300px;
+.card-container{
+    margin: 0;
+  /* display: flex; */
+  place-items: center;
+  /* min-width: 320px; */
+  /* min-height: 100vh; */
 }
 
 .card{
@@ -93,5 +94,4 @@ a{
 a:hover{
     color: rgb(255, 255, 255);
 }
-
 

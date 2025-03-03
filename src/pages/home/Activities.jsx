@@ -59,7 +59,7 @@ function Activities() {
   };
 
   return (
-    <div>
+    <div className="card-container">
       <h1>Lista de Actividades</h1>
       <Link className="btn" to="/create">➕ Nueva actividad</Link>
       <div>

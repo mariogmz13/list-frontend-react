@@ -22,6 +22,7 @@ import Edit from './components/Form/Edit.jsx';
 import Register from './pages/auth/Register.jsx';
 import Activities from './pages/home/Activities.jsx';
 import { verifyToken } from './services/authService.js';
+import Navbar from './components/navbar/Navbar.jsx';
 
 // function App() {
 //   return (
@@ -42,6 +43,7 @@ function App() {
   return (
     
     <Router>
+      <Navbar></Navbar>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
