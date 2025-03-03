@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { getItems, deleteItem } from "../../services/activitiesService";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
-// import alertConfirm from "../../components/sweetalert/ShowAlertConfirm";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2";
 
@@ -14,7 +13,6 @@ function Activities() {
   const MySwal = withReactContent(Swal);
 
   const handleDelete = async (id) => {
-    // let confirm = false;
     MySwal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción no se puede deshacer.",
@@ -42,20 +40,10 @@ function Activities() {
   }, []);
 
   const loadItems = async () => {
-    // console.log(token);
     const res = await getItems(token);
     console.log(res);
     setItems(res.data.data);
   };
-
-  // const handleDelete = async (id) => {
-  //   if(confirm){
-  //     console.log('si');
-  //     await deleteItem(id, token);
-  //     loadItems();
-  //     console.log('si');
-  //   }
-  // };
 
   const handleEdit = async (id) => {
     navigate(`/edit/${id}`);
@@ -63,17 +51,14 @@ function Activities() {
 
   return (
     <div className="card-container">
-      {/* <h1>Lista de Actividades</h1> */}
       <Link className="btn" to="/create">
         ➕ Nueva actividad
       </Link>
       <div>
         {items.map((item) => (
           <div className="card" key={item._id}>
-            {/* {item.title}{" "} */}
             <h2>{item.title}</h2>
             <h4>{item.description}</h4>
-            {/* <Link to={`/edit/${item._id}`}>✏️ Editar</Link> */}
             <div className="div-status">
               {item.complete ? (
                 <p className="complete">Completada</p>

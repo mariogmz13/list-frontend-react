@@ -24,18 +24,6 @@ import Activities from './pages/home/Activities.jsx';
 import { verifyToken } from './services/authService.js';
 import Navbar from './components/navbar/Navbar.jsx';
 
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/create" element={<Create />} />
-//         <Route path="/edit/:id" element={<Edit />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
 function App() {
 
   verifyToken()
@@ -64,9 +52,6 @@ function App() {
           </PrivateRoute>
         } />
         <Route path="*" element={<Login />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
-        {/* <Route path="/activities" element={<PrivateRoute><Activities /></PrivateRoute>} /> */}
-        {/* <Route path="/activities" element={<Activities />} /> */}
       </Routes>
     </Router>
   );

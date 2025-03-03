@@ -58,19 +58,16 @@ export const verifyToken = () => {
     if (token) {
       const decodedToken = jwtDecode(token);
       const expiracion = decodedToken.exp;
-      const ahora = Math.floor(Date.now() / 1000); // Obtiene la hora actual en segundos
+      const ahora = Math.floor(Date.now() / 1000);
 
       if (expiracion < ahora) {
-        // El token ha expirado
         console.log('Token expirado');
-        localStorage.removeItem('token'); // Elimina el token expirado
+        localStorage.removeItem('token');
       } else {
-        // El token es válido (dentro de su tiempo de expiración)
         console.log('Token válido');
         return true
       }
     } else {
-      // No hay token
       console.log('No hay token');
     }
     return false;

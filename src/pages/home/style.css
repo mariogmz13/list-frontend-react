@@ -1,17 +1,12 @@
 .card-container{
     margin: 0;
-  /* display: flex; */
   place-items: center;
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
   cursor: default;
 }
 
 .card{
     background-color: rgb(57, 57, 57);
-    /* padding: 10px; */
     margin-bottom: 10px;
-    /* border-radius: 25px; */
     min-width: 300px;
     padding: 25px;
     border-radius: 25px;
@@ -68,13 +63,6 @@ input{
     background-color: rgb(255, 88, 88);
 }
 
-/* .actions{
-    width: 50px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    transition: 1s;
-} */
-
 .action{
     display: block;
     width: 100%;
@@ -87,7 +75,6 @@ button:hover{
 }
 
 a{
-    /* border: 2px solid blue; */
     cursor: pointer;
     width: 300px;
     margin-top: 15px;
@@ -99,12 +86,8 @@ a:hover{
 }
 
 .div-status p{
-    /* margin: auto;  */
     text-align: center;
-    /* width: min-content; */
     padding: 8px;
-    /* margin: 10px auto; */
-    /* margin: 5px 50px; */
     border-radius: 25px;
 }
 
