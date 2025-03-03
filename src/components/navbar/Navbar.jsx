@@ -1,4 +1,3 @@
-import LogoutButton from '../button/LogoutButton';
 import './navbar.css'
 
 function Navbar() {
@@ -6,7 +5,6 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-logo">Lista de actividades</div>
         <div className='navbar-logout'>
-            <LogoutButton></LogoutButton>
         </div>
       </nav>
     );

@@ -3,7 +3,7 @@
     padding: 25px;
     border-radius: 25px;
     min-width: 300px;
-    margin: auto;
+    margin: 4rem auto;
   display: table;
   place-items: center;
 }

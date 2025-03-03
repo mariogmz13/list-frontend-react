@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2";
+import LogoutButton from "../../components/button/LogoutButton";
 
 function Activities() {
   const [items, setItems] = useState([]);
@@ -50,6 +51,7 @@ function Activities() {
   };
 
   return (
+    <><LogoutButton></LogoutButton>
     <div className="card-container">
       <Link className="btn" to="/create">
         ➕ Nueva actividad
@@ -83,7 +85,7 @@ function Activities() {
           </div>
         ))}
       </div>
-    </div>
+    </div></>
   );
 }
 
