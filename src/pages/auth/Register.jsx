@@ -3,6 +3,8 @@ import { register } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 import './style.css'
 import GoToLogin from "../../components/a/GoToLogin";
+import showErrorAlert from "../../components/sweetalert/ShowErrorAlert";
+import showSuccessAlert from "../../components/sweetalert/ShowSuccessAlert";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -24,7 +26,8 @@ function Register() {
     e.preventDefault();
 
     if(!passwordMatch()){
-      alert('Las contraseñas no coinciden');
+      // alert('Las contraseñas no coinciden');
+      showErrorAlert('Veficar los campos', 'Las contrasenas no coinciden')
       return;
     }
 
@@ -32,6 +35,7 @@ function Register() {
       const res = await register(email, username, password);
       if(res.ok){
         navigate("/activities");
+        showSuccessAlert('Registrado', 'El usuario se creó correctamente')
       }else{
         alert(res.message)
       }
