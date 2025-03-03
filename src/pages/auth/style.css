@@ -1,8 +1,11 @@
 .container{
     background-color: rgb(57, 57, 57);
-    padding: 45px;
+    padding: 25px;
     border-radius: 25px;
     min-width: 300px;
+    margin: auto;
+  display: table;
+  place-items: center;
 }
 
 h1{

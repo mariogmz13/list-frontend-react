@@ -17,7 +17,7 @@ function Create() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Crear actividad</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Nombre" required />

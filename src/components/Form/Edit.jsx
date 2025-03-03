@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getItemById, updateItem } from "../../services/activitiesService";
 import { useParams, useNavigate } from "react-router-dom";
 import { getToken } from "../../services/authService";
+import './form.css'
 
 function Edit() {
   const { id } = useParams();
@@ -36,7 +37,7 @@ function Edit() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Editar Actividad</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
@@ -50,9 +51,7 @@ function Edit() {
           <option value='false'>No</option>
         </select>
       </label>
-      <p>Opción seleccionada: {complete}</p>
       
-      {/* <p>Opción seleccionada: {complete}</p> */}
       
       <button type="submit">Actualizar</button>
   

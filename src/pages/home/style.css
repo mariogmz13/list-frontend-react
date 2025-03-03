@@ -4,14 +4,17 @@
   place-items: center;
   /* min-width: 320px; */
   /* min-height: 100vh; */
+  cursor: default;
 }
 
 .card{
     background-color: rgb(57, 57, 57);
-    padding: 10px;
+    /* padding: 10px; */
     margin-bottom: 10px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     min-width: 300px;
+    padding: 25px;
+    border-radius: 25px;
 }
 
 h1{
@@ -93,5 +96,25 @@ a{
 }
 a:hover{
     color: rgb(255, 255, 255);
+}
+
+.div-status p{
+    /* margin: auto;  */
+    text-align: center;
+    /* width: min-content; */
+    padding: 8px;
+    /* margin: 10px auto; */
+    /* margin: 5px 50px; */
+    border-radius: 25px;
+}
+
+.complete{
+    background-color: green;
+    color: white;
+}
+
+.pending{
+    background-color: yellow;
+    color: black;
 }
 
