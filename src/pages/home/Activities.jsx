@@ -2,11 +2,36 @@ import { useEffect, useState } from "react";
 import { getItems, deleteItem } from "../../services/activitiesService";
 import { Link, useNavigate } from "react-router-dom";
 import './style.css'
+// import alertConfirm from "../../components/sweetalert/ShowAlertConfirm";
+import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
 
 function Activities() {
   const [items, setItems] = useState([]);
   const token = localStorage.getItem('token');
   const navigate = useNavigate();
+
+  const MySwal = withReactContent(Swal);
+  
+  const handleDelete = async (id) => {
+    // let confirm = false;
+    MySwal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción no se puede deshacer.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        console.log('Entra');
+        await deleteItem(id, token);
+        loadItems()
+        MySwal.fire('¡Eliminado!', 'La actividad ha sido eliminada.', 'success');
+      }
+      console.log(result);
+    });
+  };
 
   useEffect(() => {
     loadItems();
@@ -20,10 +45,14 @@ function Activities() {
     setItems(res.data.data);
   };
 
-  const handleDelete = async (id) => {
-    await deleteItem(id, token);
-    loadItems();
-  };
+  // const handleDelete = async (id) => {
+  //   if(confirm){
+  //     console.log('si');
+  //     await deleteItem(id, token);
+  //     loadItems();
+  //     console.log('si');
+  //   }
+  // };
 
   const handleEdit = async (id) => {
     navigate(`/edit/${id}`)

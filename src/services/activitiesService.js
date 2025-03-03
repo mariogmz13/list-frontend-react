@@ -30,7 +30,7 @@ export const updateItem = async (id, data, token) => axios.put(`${API_URL}/${id}
           },
     });
 
-export const deleteItem = async (id, token) => axios.delete(`${API_URL}/${id}`, {
+export const deleteItem = async (id, token) => await axios.delete(`${API_URL}/${id}`, {
     headers: {
         Authorization: `Bearer ${token}`,
       },
